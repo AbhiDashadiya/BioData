@@ -1,594 +1,438 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Dashadiya Abhi Kantibhai</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashadiya Abhi Kantibhai — Biodata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF3E6;
+    --maroon:#7B2D26;
+    --maroon-dark:#5C211C;
+    --gold:#B8863B;
+    --ink:#2E2018;
+    --rose:#C98B6D;
+    --line:rgba(123,45,38,0.18);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    max-width:640px;
+    margin:0 auto;
+    background:#fff;
+    box-shadow:0 0 60px rgba(92,33,28,0.12);
+    overflow:hidden;
+  }
 
-        :root {
-            --navy: #173a5e;
-            --gold: #b28a3e;
-            --cream: #fbf7ed;
-            --paper: #fffdf7;
-            --ink: #202b38;
-            --line: #e7d9ba
-        }
+  /* HERO */
+  .hero{
+    position:relative;
+    height:78vh;
+    min-height:460px;
+    max-height:620px;
+    overflow:hidden;
+  }
+  .hero img{
+    width:100%;height:100%;object-fit:cover;object-position:top center;
+    animation:reveal 1.4s ease-out;
+  }
+  @keyframes reveal{from{opacity:0;transform:scale(1.04);}to{opacity:1;transform:scale(1);}}
+  .hero::after{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(to top, rgba(20,13,9,0.98) 0%, rgba(20,13,9,0.9) 28%, rgba(20,13,9,0.34) 58%, rgba(20,13,9,0) 80%);
+  }
+  .hero-text{
+    position:absolute; left:0; right:0; bottom:0;
+    z-index:1;
+    max-width:560px;
+    margin:0 auto;
+    padding:28px 28px 30px;
+    color:#FFFFFF;
+    text-align:center;
+    background:rgba(20,13,9,0.55);
+    border:1px solid rgba(255,255,255,0.18);
+    border-bottom:0;
+    box-shadow:0 -12px 34px rgba(20,13,9,0.22);
+    backdrop-filter:blur(3px);
+    text-shadow:0 2px 12px rgba(0,0,0,0.72);
+  }
+  .om{
+    font-size:22px;
+    color:var(--gold);
+    letter-spacing:0.3em;
+    margin-bottom:10px;
+    text-shadow:0 2px 10px rgba(0,0,0,0.6);
+  }
+  .hero-text h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:48px;
+    letter-spacing:0.015em;
+    margin:0 0 6px;
+    line-height:1.1;
+    color:#FFFFFF;
+  }
+  .hero-sub{
+    font-size:14px;
+    letter-spacing:0.04em;
+    color:#F0C9A8;
+    margin-bottom:16px;
+    font-weight:500;
+  }
+  .hero-facts{
+    display:flex;
+    justify-content:center;
+    gap:8px 18px;
+    font-size:12px;
+    color:#FFFFFF;
+    flex-wrap:wrap;
+    font-weight:500;
+    line-height:1.45;
+  }
+  .hero-facts span:not(:last-child)::after{
+    content:"";
+    display:inline-block;
+    width:4px;height:4px;
+    border-radius:50%;
+    background:var(--gold);
+    margin-left:18px;
+    vertical-align:middle;
+  }
 
-        * {
-            box-sizing: border-box
-        }
+  @media (min-width:521px){
+    .hero-text{
+      display:none;
+    }
 
-        html {
-            scroll-behavior: smooth
-        }
+    .hero img{
+      filter:saturate(0.9);
+      transform:scale(1.02);
+    }
 
-        body {
-            margin: 0;
-            background: #eee9df;
-            color: var(--ink);
-            font-family: Inter, Arial, sans-serif;
-            animation: page-enter 900ms ease both
-        }
+    .hero::after{
+      background:linear-gradient(to top, rgba(20,13,9,0.78) 0%, rgba(20,13,9,0.52) 30%, rgba(20,13,9,0.16) 58%, rgba(20,13,9,0) 80%);
+    }
 
-        .page {
-            max-width: 1120px;
-            margin: 32px auto;
-            background: var(--paper);
-            box-shadow: 0 18px 50px #0002;
-            position: relative
-        }
+    .hero-text{
+      max-width:450px;
+      padding:18px 20px 20px;
+      background:rgba(20,13,9,0.3);
+      border-radius:2px 2px 0 0;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+  }
 
-        .inner {
-            padding: 64px 72px
-        }
+  /* SECTIONS */
+  .section{
+    padding:44px 34px;
+    border-bottom:1px solid var(--line);
+  }
+  .section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-style:italic;
+    font-size:28px;
+    color:var(--maroon);
+    margin:0 0 4px;
+  }
+  .section-rule{
+    width:44px;height:2px;
+    background:var(--gold);
+    margin-bottom:26px;
+  }
 
-        .ornament,
-        .eyebrow {
-            text-align: center;
-            color: var(--gold);
-            letter-spacing: 5px
-        }
+  .row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:11px 0;
+    border-bottom:1px dashed var(--line);
+    font-size:15px;
+  }
+  .row:last-child{border-bottom:none;}
+  .row dt{color:#8A7160; font-weight:500; flex:0 0 40%;}
+  .row dd{margin:0; text-align:right; flex:1; font-weight:500;}
 
-        .hero {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 56px;
-            align-items: center;
-            min-height: 620px
-        }
+  .subhead{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:19px;
+    color:var(--gold);
+    margin:26px 0 6px;
+  }
+  .subhead:first-child{margin-top:0;}
 
-        .hero-photo {
-            width: 100%;
-            aspect-ratio: 3/4.7;
-            object-fit: cover;
-            object-position: center top;
-            border: 8px solid #fff;
-            outline: 1px solid var(--gold);
-            box-shadow: 0 12px 30px #0002;
-            animation: photo-enter 1100ms 150ms cubic-bezier(.2, .75, .25, 1) both;
-            transition: transform 500ms ease, box-shadow 500ms ease
-        }
+  /* FAMILY */
+  .family-member{
+    padding:18px 20px;
+    background:var(--cream);
+    border-left:3px solid var(--gold);
+    margin-bottom:14px;
+  }
+  .family-member:last-child{margin-bottom:0;}
+  .family-role{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    color:var(--maroon);
+    font-size:18px;
+    margin-bottom:8px;
+  }
+  .family-member .row{border-bottom:1px dashed rgba(123,45,38,0.12); font-size:14px;}
 
-        .hero-photo:hover {
-            transform: translateY(-6px) scale(1.015);
-            box-shadow: 0 20px 38px #0003
-        }
+  /* PROPERTY */
+  .prop-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+  }
+  .prop-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:18px;
+    color:var(--maroon);
+    margin:0 0 10px;
+  }
+  .prop-card ul{
+    margin:0; padding:0; list-style:none;
+  }
+  .prop-card li{
+    font-size:14px;
+    padding:6px 0 6px 16px;
+    position:relative;
+    border-bottom:1px dashed var(--line);
+  }
+  .prop-card li:last-child{border-bottom:none;}
+  .prop-card li::before{
+    content:"◆";
+    position:absolute; left:0; top:6px;
+    font-size:8px; color:var(--gold);
+  }
 
-        h1,
-        .section-title,
-        h3 {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            color: var(--navy)
-        }
+  /* GALLERY */
+  .gallery{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    grid-template-rows:auto auto;
+    gap:10px;
+  }
+  .gallery img{
+    width:100%; height:100%; object-fit:cover;
+    display:block;
+  }
+  .gallery a:nth-child(1){grid-row:1 / 3;}
+  .gallery img{aspect-ratio:3/4;}
+  .gallery a:nth-child(1) img{aspect-ratio:auto; height:100%;}
 
-        h1 {
-            font-size: 68px;
-            line-height: .9;
-            text-transform: uppercase;
-            margin: 12px 0 18px;
-            animation: content-enter 800ms 420ms cubic-bezier(.2, .75, .25, 1) both
-        }
+  /* CONTACT / FOOTER */
+  .footer{
+    background:var(--maroon-dark);
+    color:var(--cream);
+    padding:42px 34px 26px;
+    text-align:center;
+    position:relative;
+  }
+  .footer::before{
+    content:"";
+    display:block;
+    width:54px;
+    height:2px;
+    margin:0 auto 24px;
+    background:var(--gold);
+  }
+  .footer-label{
+    color:var(--rose);
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .footer-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    font-weight:600;
+    margin:0;
+    color:var(--cream);
+  }
+  .footer .om{color:var(--gold);}
+  .contact-row{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:24px 0 30px;
+    flex-wrap:wrap;
+    font-size:13px;
+  }
+  .contact-row a{
+    color:var(--cream);
+    text-decoration:none;
+    border:1px solid rgba(250,243,230,0.25);
+    border-radius:999px;
+    padding:9px 14px;
+    transition:background 200ms ease, border-color 200ms ease, transform 200ms ease;
+  }
+  .contact-row a:hover{
+    background:rgba(250,243,230,0.1);
+    border-color:var(--rose);
+    transform:translateY(-2px);
+  }
+  .tagline{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:16px;
+    color:#E8B08E;
+    letter-spacing:0.02em;
+  }
+  .footer-credit{
+    margin-top:22px;
+    padding-top:16px;
+    border-top:1px solid rgba(250,243,230,0.14);
+    color:rgba(250,243,230,0.6);
+    font-size:11px;
+    letter-spacing:0.04em;
+  }
 
-        .hero-meta {
-            line-height: 1.9;
-            color: #66717c;
-            animation: content-enter 800ms 560ms cubic-bezier(.2, .75, .25, 1) both
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 28px;
-            padding: 12px 22px;
-            background: var(--navy);
-            color: #fff;
-            text-decoration: none;
-            font-size: 13px;
-            letter-spacing: 1px
-        }
-
-        section {
-            padding: 70px 0;
-            border-top: 1px solid var(--line);
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity 800ms ease, transform 800ms cubic-bezier(.2, .75, .25, 1)
-        }
-
-        section.is-visible {
-            opacity: 1;
-            transform: translateY(0)
-        }
-
-        .section-title {
-            font-size: 40px;
-            margin: 0 0 30px
-        }
-
-        .grid,
-        .property-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px
-        }
-
-        .card,
-        .property {
-            border: 1px solid var(--line);
-            padding: 24px;
-            background: #fffdf7;
-            transition: transform 350ms ease, box-shadow 350ms ease, border-color 350ms ease
-        }
-
-        .card:hover,
-        .property:hover {
-            transform: translateY(-5px);
-            border-color: #d3b978;
-            box-shadow: 0 12px 24px #6d57301a
-        }
-
-        .property {
-            background: #faf4e6;
-            padding: 32px
-        }
-
-        h3 {
-            font-size: 27px;
-            margin: 0 0 18px
-        }
-
-        .row {
-            display: grid;
-            grid-template-columns: 150px 20px 1fr;
-            gap: 4px;
-            padding: 9px 0;
-            border-bottom: 1px solid #eee7d9;
-            font-size: 14px;
-            line-height: 1.5
-        }
-
-        .row:last-child {
-            border: 0
-        }
-
-        .label {
-            font-weight: 600;
-            color: var(--navy)
-        }
-
-        .sep {
-            color: var(--gold)
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
-            grid-template-rows: repeat(2, 220px);
-            gap: 18px
-        }
-
-        .gallery figure {
-            margin: 0;
-            min-height: 0;
-            border: 1px solid var(--line);
-            overflow: hidden;
-            background: #f5efe3
-        }
-
-        .gallery figure:first-child {
-            grid-row: 1 / 3
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 700ms cubic-bezier(.2, .75, .25, 1), filter 700ms ease
-        }
-
-        .gallery figure {
-            transition: transform 450ms ease, box-shadow 450ms ease
-        }
-
-        .gallery figure:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 28px #6d573026
-        }
-
-        .gallery figure:hover img {
-            transform: scale(1.045);
-            filter: saturate(1.08)
-        }
-
-        .placeholder {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            background: linear-gradient(135deg, #fbf7ed, #f1e8d5);
-            color: var(--gold)
-        }
-
-        .placeholder strong {
-            font: 30px 'Cormorant Garamond';
-            color: var(--navy)
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: var(--gold);
-            letter-spacing: 4px;
-            font-size: 10px;
-            border-top: 1px solid var(--line);
-            animation: content-enter 900ms 300ms ease both
-        }
-
-        .ornament,
-        .eyebrow {
-            animation: content-enter 700ms 280ms ease both
-        }
-
-        .grid > *,
-        .property-grid > *,
-        .gallery > * {
-            transition-delay: calc(var(--item-index, 0) * 90ms)
-        }
-
-        @keyframes page-enter {
-            from { opacity: 0 }
-            to { opacity: 1 }
-        }
-
-        @keyframes photo-enter {
-            from { opacity: 0; transform: translateY(24px) scale(.97) }
-            to { opacity: 1; transform: translateY(0) scale(1) }
-        }
-
-        @keyframes content-enter {
-            from { opacity: 0; transform: translateY(16px) }
-            to { opacity: 1; transform: translateY(0) }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto }
-
-            *,
-            *::before,
-            *::after {
-                animation-duration: .01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: .01ms !important
-            }
-
-            section {
-                opacity: 1;
-                transform: none
-            }
-        }
-
-        @media(max-width:760px) {
-            .page {
-                margin: 0
-            }
-
-            .inner {
-                padding: 42px 30px
-            }
-
-            .hero,
-            .grid,
-            .property-grid,
-            .gallery {
-                grid-template-columns: 1fr
-            }
-
-            .gallery {
-                grid-template-rows: none
-            }
-
-            .gallery figure,
-            .gallery figure:first-child {
-                height: 360px;
-                grid-row: auto
-            }
-
-            .hero {
-                gap: 30px;
-                min-height: auto
-            }
-
-            .hero-photo {
-                width: min(280px, 100%);
-                margin: auto
-            }
-
-            h1 {
-                font-size: 48px
-            }
-
-            .row {
-                grid-template-columns: 120px 15px 1fr;
-                font-size: 13px
-            }
-        }
-    </style>
+  @media (max-width:520px){
+    .hero-text{padding:22px 18px 24px;}
+    .hero-text h1{font-size:38px;}
+    .hero-sub{font-size:13px;}
+    .hero-facts{font-size:11px; gap:6px 12px;}
+    .section{padding:32px 22px;}
+    .prop-grid{grid-template-columns:1fr;}
+    .row dt{flex:0 0 46%; font-size:13.5px;}
+    .row dd{font-size:13.5px;}
+  }
+</style>
 </head>
-
 <body>
-    <main class="page">
-        <div class="inner">
-            <header class="hero" id="top">
-                <div><img class="hero-photo"
-                        src="Images/Hero%20Image.jpg"
-                        alt="Dashadiya Abhi Kantibhai"></div>
-                <div>
-                    <div class="ornament">✦ ── ॐ ── ✦</div>
-                    <div class="eyebrow">MARRIAGE BIO DATA</div>
-                    <h1>Dashadiya<br>Abhi<br>Kantibhai</h1>
-                    <div class="hero-meta">B. Tech in Computer Engineering<br>IndiaNIC, Ahmedabad<br>15th April, 2002 •
-                        5’6’’ Feet • 90 KG</div>
-                        <!-- <a class="btn" href="#profile">VIEW PROFILE ↓</a> -->
-                </div>
-            </header>
-            <section id="profile">
-                <h2 class="section-title">Personal Details</h2>
-                <div class="card">
-                    <div class="row">
-                        <div class="label">Name</div>
-                        <div class="sep">:</div>
-                        <div>Dashadiya Abhi Kantibhai</div>
-                    </div>
-                    <div class="row">
-                        <div class="label">Date of Birth</div>
-                        <div class="sep">:</div>
-                        <div>15th April, 2002</div>
-                    </div>
-                    <div class="row">
-                        <div class="label">Height</div>
-                        <div class="sep">:</div>
-                        <div>5’6’’ Feet</div>
-                    </div>
-                    <div class="row">
-                        <div class="label">Weight</div>
-                        <div class="sep">:</div>
-                        <div>90 KG</div>
-                    </div>
-                    <div class="row">
-                        <div class="label">Qualification</div>
-                        <div class="sep">:</div>
-                        <div>B. Tech in computer engineering</div>
-                    </div>
-                    <div class="row">
-                        <div class="label">College</div>
-                        <div class="sep">:</div>
-                        <div>Vishwakarma Government Engineering College, Ahmedabad</div>
-                    </div>
-                    <div class="row">
-                        <div class="label">Native Place</div>
-                        <div class="sep">:</div>
-                        <div>Rapar, Jetpar (Machhu)</div>
-                    </div>
-                    <div class="row">
-                        <div class="label">Maternal</div>
-                        <div class="sep">:</div>
-                        <div>Jiteshbhai Amratbhai Saravadiya (Jivapar)</div>
-                    </div>
-                    <div class="row">
-                        <div class="label">Residence Address</div>
-                        <div class="sep">:</div>
-                        <div>402, Alpha Homes, Tower-A, Uma Township, Morbi-2, 363642</div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Job Details</h3>
-                        <div class="row">
-                            <div class="label">Company Name</div>
-                            <div class="sep">:</div>
-                            <div>IndiaNIC, Ahmedabad</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Salary</div>
-                            <div class="sep">:</div>
-                            <div>13.44 LPA</div>
-                        </div>
-                    </div>
-                    <!-- <div class="card">
-                        <h3>Sibling Details</h3>
-                        <div class="row">
-                            <div class="label">Brother ( Older )</div>
-                            <div class="sep">:</div>
-                            <div>Dashadiya Divyesh Kantibhai (B.H.M.S.)</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Marital Status</div>
-                            <div class="sep">:</div>
-                            <div>Married</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Bhabhi's Name</div>
-                            <div class="sep">:</div>
-                            <div>Pratima Divyesh Dashadiya</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Hospital Details</div>
-                            <div class="sep">:</div>
-                            <div>Jivandeep Hospital ( Rangpar )</div>
-                        </div>
-                    </div> -->
-                </div>
-            </section>
-            <section>
-                <h2 class="section-title">Family Details</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Father</h3>
-                        <div class="row">
-                            <div class="label">Name</div>
-                            <div class="sep">:</div>
-                            <div>Dashadiya Kantibhai Savjibhai</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Occupation</div>
-                            <div class="sep">:</div>
-                            <div>Shopkeeper (Welcome Ceramics)</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Maternal</div>
-                            <div class="sep">:</div>
-                            <div>Desai (Vakada)</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Mother</h3>
-                        <div class="row">
-                            <div class="label">Name</div>
-                            <div class="sep">:</div>
-                            <div>Dashadiya Geetaben Kantibhai</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Occupation</div>
-                            <div class="sep">:</div>
-                            <div>Housewife</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Maternal</div>
-                            <div class="sep">:</div>
-                            <div>Kalariya (Chakampar)</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Brother</h3>
-                        <div class="row">
-                            <div class="label">Name</div>
-                            <div class="sep">:</div>
-                            <div>Dashadiya Divyesh Kantibhai</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Occupation</div>
-                            <div class="sep">:</div>
-                            <div>Doctor (B.H.M.S.)</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Hospital</div>
-                            <div class="sep">:</div>
-                            <div>Jivandeep Hospital</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h3>Brother's Wife</h3>
-                        <div class="row">
-                            <div class="label">Name</div>
-                            <div class="sep">:</div>
-                            <div>Dashadiya Pratimaben Divyesh</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Occupation</div>
-                            <div class="sep">:</div>
-                            <div>Housewife</div>
-                        </div>
-                        <div class="row">
-                            <div class="label">Village</div>
-                            <div class="sep">:</div>
-                            <div>Manaba (Charola)</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h2 class="section-title">Property Details</h2>
-                <div class="property-grid">
-                    <div class="property">
-                        <h3>🏠 Village Property</h3>
-                        <ul>
-                            <li>1 home,</li>
-                            <li>30 vigha Anandpar (Rapar, Kutch),</li>
-                            <li>7 vigha Sultanpar,</li>
-                            <li>3 vigha Rapar (Jetpar)</li>
-                        </ul>
-                    </div>
-                    <div class="property">
-                        <h3>🏢 City Property</h3>
-                        <ul>
-                            <li>3 BHK House</li>
-                            <li>1 Shop (Jivandeep hospital)</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <h2 class="section-title">Photo Gallery</h2>
-                <div class="gallery">
-                    <figure><img
-                            src="Images/Image3.jpeg"
-                            alt="Main photo"></figure>
-                    <figure><img src="Images/Image1.JPG" alt="Gallery photo 2"></figure>
-                    <figure><img src="Images/Image2.jpg" alt="Gallery photo 3"></figure>
-                </div>
-            </section>
-            <section>
-                <h2 class="section-title">Contact Details</h2>
-                <div class="card">
-                    <div class="row">
-                        <div class="label">Phone Number</div>
-                        <div class="sep">:</div>
-                        <div><a href="tel:8530865172">8530865172</a>, <a href="tel:9979361763">9979361763</a></div>
-                    </div>
-                    <div class="row">
-                        <div class="label">Email Address</div>
-                        <div class="sep">:</div>
-                        <div><a href="mailto:dashadiyaabhi@gmail.com">dashadiyaabhi@gmail.com</a></div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <footer>TRADITION • VALUES • FAMILY</footer>
-    </main>
-    <script>
-        const sections = document.querySelectorAll('section');
-        const staggeredItems = document.querySelectorAll('.grid > *, .property-grid > *, .gallery > *');
+<div class="sheet">
 
-        staggeredItems.forEach((item, index) => {
-            item.style.setProperty('--item-index', index % 4);
-        });
+  <div class="hero">
+    <img src="https://abhi-dashadiya-biodata.vercel.app/Images/Hero%20Image.jpg" alt="Abhi Dashadiya">
+    <div class="hero-text">
+      <div class="om">ॐ</div>
+      <h1>Abhi Dashadiya</h1>
+      <div class="hero-sub">Marriage Biodata</div>
+      <div class="hero-facts">
+        <span>15 April 2002</span>
+        <span>5'6"</span>
+        <span>90 kg</span>
+        <span>B.Tech, Computer Engineering</span>
+      </div>
+    </div>
+  </div>
 
-        const sectionObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
+  <div class="section">
+    <div class="section-title">Personal details</div>
+    <div class="section-rule"></div>
+    <dl>
+      <div class="row"><dt>Name</dt><dd>Dashadiya Abhi Kantibhai</dd></div>
+      <div class="row"><dt>Date of birth</dt><dd>15th April, 2002</dd></div>
+      <div class="row"><dt>Height</dt><dd>5'6" feet</dd></div>
+      <div class="row"><dt>Weight</dt><dd>90 kg</dd></div>
+      <div class="row"><dt>Qualification</dt><dd>B.Tech in Computer Engineering</dd></div>
+      <div class="row"><dt>College</dt><dd>Vishwakarma Government Engineering College, Ahmedabad</dd></div>
+      <div class="row"><dt>Native place</dt><dd>Rapar, Jetpar (Machhu)</dd></div>
+      <div class="row"><dt>Maternal</dt><dd>Jiteshbhai Amratbhai Saravadiya (Jivapar)</dd></div>
+      <div class="row"><dt>Residence</dt><dd>402, Alpha Homes, Tower&#8209;A, Uma Township, Morbi&#8209;2, 363642</dd></div>
+    </dl>
 
-        sections.forEach(section => sectionObserver.observe(section));
-    </script>
+    <div class="subhead">Job details</div>
+    <dl>
+      <div class="row"><dt>Company</dt><dd>IndiaNIC, Ahmedabad</dd></div>
+      <div class="row"><dt>Salary</dt><dd>13.44 LPA</dd></div>
+    </dl>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Family details</div>
+    <div class="section-rule"></div>
+
+    <div class="family-member">
+      <div class="family-role">Father</div>
+      <div class="row"><dt>Name</dt><dd>Dashadiya Kantibhai Savjibhai</dd></div>
+      <div class="row"><dt>Occupation</dt><dd>Shopkeeper (Welcome Ceramics)</dd></div>
+      <div class="row"><dt>Maternal</dt><dd>Desai (Vakada)</dd></div>
+    </div>
+
+    <div class="family-member">
+      <div class="family-role">Mother</div>
+      <div class="row"><dt>Name</dt><dd>Dashadiya Geetaben Kantibhai</dd></div>
+      <div class="row"><dt>Occupation</dt><dd>Housewife</dd></div>
+      <div class="row"><dt>Maternal</dt><dd>Kalariya (Chakampar)</dd></div>
+    </div>
+
+    <div class="family-member">
+      <div class="family-role">Brother</div>
+      <div class="row"><dt>Name</dt><dd>Dashadiya Divyesh Kantibhai</dd></div>
+      <div class="row"><dt>Occupation</dt><dd>Doctor (B.H.M.S.)</dd></div>
+      <div class="row"><dt>Hospital</dt><dd>Jivandeep Hospital</dd></div>
+    </div>
+
+    <div class="family-member">
+      <div class="family-role">Brother's wife</div>
+      <div class="row"><dt>Name</dt><dd>Dashadiya Pratimaben Divyesh</dd></div>
+      <div class="row"><dt>Occupation</dt><dd>Housewife</dd></div>
+      <div class="row"><dt>Village</dt><dd>Manaba (Charola)</dd></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Property details</div>
+    <div class="section-rule"></div>
+    <div class="prop-grid">
+      <div class="prop-card">
+        <h3>Village property</h3>
+        <ul>
+          <li>1 home</li>
+          <li>30 vigha, Anandpar (Rapar, Kutch)</li>
+          <li>7 vigha, Sultanpar</li>
+          <li>3 vigha, Rapar (Jetpar)</li>
+        </ul>
+      </div>
+      <div class="prop-card">
+        <h3>City property</h3>
+        <ul>
+          <li>3 BHK house</li>
+          <li>1 shop (Jivandeep Hospital)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Photo gallery</div>
+    <div class="section-rule"></div>
+    <div class="gallery">
+      <a href="Images/Image3.jpeg" target="_blank"><img src="Images/Image3.jpeg" alt="Main photo"></a>
+      <a href="Images/Image1.JPG" target="_blank"><img src="Images/Image1.JPG" alt="Gallery photo 2"></a>
+      <a href="Images/Image2.jpg" target="_blank"><img src="Images/Image2.jpg" alt="Gallery photo 3"></a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="om">ॐ</div>
+    <div class="footer-label">Tradition · Values · Family</div>
+    <h2 class="footer-title">With warm regards</h2>
+    <div class="contact-row">
+      <a href="tel:8530865172">8530865172</a>
+      <a href="tel:9979361763">9979361763</a>
+      <a href="mailto:dashadiyaabhi@gmail.com">dashadiyaabhi@gmail.com</a>
+    </div>
+    <div class="tagline">A new chapter begins with family.</div>
+    <div class="footer-credit">Made by Abhi Dashadiya</div>
+  </div>
+
+</div>
 </body>
-
 </html>
